@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gateway Self-Practice — Quiet, Offline Relaxation Trainer</title>
+<meta name="description" content="Gateway Self-Practice — a quiet, fully offline trainer for relaxation, breathing and visualization exercises. No account. No ads. No tracking.">
+<style>
+  :root{
+    --bg:#07070f; --bg2:#0d0d1d; --card:#141428; --card2:#1a1a33;
+    --text:#eef0ff; --muted:#a5a9c9; --accent:#8b5cf6; --accent2:#6366f1;
+    --glow:0 0 60px rgba(139,92,246,.35);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:radial-gradient(1200px 600px at 50% -10%, #1b1040 0%, var(--bg) 55%) fixed, var(--bg);
+       color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       line-height:1.6; -webkit-font-smoothing:antialiased;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header.hero{text-align:center;padding:84px 24px 56px}
+  .icon{width:128px;height:128px;border-radius:32px;box-shadow:var(--glow),0 12px 40px rgba(0,0,0,.6);margin-bottom:28px}
+  h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+  .tagline{font-size:clamp(1.05rem,2.4vw,1.35rem);color:var(--muted);max-width:640px;margin:0 auto 36px}
+  .play-btn{display:inline-flex;align-items:center;gap:14px;background:#fff;color:#0b0b14;text-decoration:none;
+            padding:14px 28px 14px 20px;border-radius:14px;font-weight:700;font-size:1.05rem;
+            box-shadow:0 8px 30px rgba(255,255,255,.15);transition:transform .15s ease, box-shadow .15s ease}
+  .play-btn:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(255,255,255,.22)}
+  .play-btn small{display:block;font-weight:500;font-size:.72rem;color:#555;letter-spacing:.04em}
+  .play-btn .big{font-size:1.15rem}
+  .tri{width:34px;height:34px;flex:none}
+  .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .badge{font-size:.82rem;color:var(--muted);border:1px solid #2a2a4d;background:rgba(20,20,40,.6);
+         padding:7px 16px;border-radius:999px}
+  section{padding:56px 0}
+  h2{font-size:1.7rem;font-weight:750;text-align:center;margin-bottom:14px;letter-spacing:-.01em}
+  .sub{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 40px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:linear-gradient(160deg,var(--card),var(--card2));border:1px solid #26264a;border-radius:18px;
+        padding:26px 22px;transition:transform .15s ease,border-color .15s ease}
+  .card:hover{transform:translateY(-3px);border-color:#3d3d70}
+  .card .emoji{font-size:1.7rem;margin-bottom:10px}
+  .card h3{font-size:1.02rem;margin-bottom:8px}
+  .card p{font-size:.92rem;color:var(--muted)}
+  .shots{display:flex;gap:18px;overflow-x:auto;padding:10px 4px 22px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+  .shots::-webkit-scrollbar{height:8px}
+  .shots::-webkit-scrollbar-thumb{background:#2c2c55;border-radius:8px}
+  .shots img{height:480px;border-radius:22px;border:1px solid #2c2c55;scroll-snap-align:center;flex:none;
+             box-shadow:0 14px 44px rgba(0,0,0,.55)}
+  @media(max-width:600px){.shots img{height:380px}}
+  .privacy{background:linear-gradient(160deg,#101024,#151530);border:1px solid #26264a;border-radius:22px;
+           padding:44px 32px;text-align:center;max-width:760px;margin:0 auto}
+  .privacy h2{margin-bottom:10px}
+  .privacy p{color:var(--muted);max-width:560px;margin:0 auto}
+  .privacy .checks{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+  .check{font-size:.88rem;background:#1c1c3a;border:1px solid #30305c;padding:8px 18px;border-radius:999px}
+  .check span{color:#7ee2a8;margin-right:6px}
+  .disclaimer{max-width:720px;margin:0 auto;color:#7c80a3;font-size:.82rem;text-align:center}
+  footer{text-align:center;padding:40px 24px 56px;color:#5d6186;font-size:.82rem}
+  footer a{color:#8b8fc0}
+</style>
+</head>
+<body>
+
+<header class="hero wrap">
+  <img class="icon" src="assets/icon.png" alt="Gateway Self-Practice app icon">
+  <h1>Gateway Self-Practice</h1>
+  <p class="tagline">A quiet, fully offline trainer for relaxation, breathing and visualization exercises.</p>
+  <a class="play-btn" href="https://play.google.com/store/apps/details?id=io.github.erankopel.selfpractice">
+    <svg class="tri" viewBox="0 0 24 24" aria-hidden="true"><path fill="#EA4335" d="M3.6 2.3 13.7 12 3.6 21.7c-.4-.2-.6-.6-.6-1.1V3.4c0-.5.2-.9.6-1.1z"/><path fill="#FBBC04" d="M17.4 8.3 13.7 12l3.7 3.7 3.1-1.8c.8-.5.8-1.3 0-1.8l-3.1-1.8z"/><path fill="#4285F4" d="M3.6 2.3c.3-.2.8-.2 1.2.1l12.6 7.1-3.7 2.5L3.6 2.3z"/><path fill="#34A853" d="M3.6 21.7c.3.2.8.2 1.2-.1l12.6-7.1-3.7-2.5L3.6 21.7z"/></svg>
+    <span><small>GET IT ON</small><span class="big">Google Play</span></span>
+  </a>
+  <div class="badges">
+    <span class="badge">100% offline</span>
+    <span class="badge">No account</span>
+    <span class="badge">No ads</span>
+    <span class="badge">No tracking</span>
+  </div>
+</header>
+
+<section class="wrap">
+  <h2>What's inside</h2>
+  <p class="sub">A practice tool, not a course and not a subscription. Built around color, breath and sound — not reading.</p>
+  <div class="grid">
+    <div class="card"><div class="emoji">🧘</div><h3>Guided session</h3><p>The same frame around every exercise: paced breathing, setting worries aside, stating intent, a countdown into calm, the exercise itself, then counting back up and journaling what happened.</p></div>
+    <div class="card"><div class="emoji">🌬️</div><h3>Breathing</h3><p>An animated six-breath cycle with per-second counting inside the breath marker — in for six, hold for ten, out for eight.</p></div>
+    <div class="card"><div class="emoji">🎯</div><h3>Focus 10 &amp; Focus 12</h3><p>Standalone trainers for the two states the practice builds toward, each with its own countdown, count-back and instant return.</p></div>
+    <div class="card"><div class="emoji">🎨</div><h3>Visualization tools</h3><p>Energy bar, body maps and REBAL — imagination exercises drawn as interactive color over a body outline.</p></div>
+    <div class="card"><div class="emoji">⚡</div><h3>Daily tools</h3><p>Short full-screen color-and-breath practices you can run in just a few minutes.</p></div>
+    <div class="card"><div class="emoji">🎧</div><h3>Binaural beats &amp; voice</h3><p>A tone generator playing a slightly different pitch in each ear, plus on-device voice guidance so you can practice with eyes closed.</p></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2>Take a look</h2>
+  <p class="sub">Real screens from the app — dark, calm, and built for following with your eyes, not reading.</p>
+  <div class="shots">
+    <img src="assets/s1.png" alt="Daily Tools screen" loading="lazy">
+    <img src="assets/s5.png" alt="Breathing exercise screen" loading="lazy">
+    <img src="assets/s2.png" alt="Focus 10 screen" loading="lazy">
+    <img src="assets/s4.png" alt="Body Maps screen" loading="lazy">
+    <img src="assets/s3.png" alt="Full Session screen" loading="lazy">
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="privacy">
+    <h2>Your practice stays yours</h2>
+    <p>The app doesn't even request internet permission, so technically it cannot send anything anywhere. Your journal and settings live only on your device and are removed when you uninstall.</p>
+    <div class="checks">
+      <span class="check"><span>✓</span>No account</span>
+      <span class="check"><span>✓</span>No ads</span>
+      <span class="check"><span>✓</span>No analytics</span>
+      <span class="check"><span>✓</span>No trackers</span>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <p class="disclaimer">Please note: these are relaxation and visualization exercises. They are not medical treatment — they don't diagnose, treat, cure or prevent any disease, and they're no substitute for seeing a doctor about real symptoms, including pain. If you have a seizure disorder, heart condition or serious mental health condition, talk to a doctor before deep relaxation or breath-holding practice. Practice lying or sitting somewhere safe — never while driving or operating machinery.</p>
+</section>
+
+<footer>
+  <a href="https://play.google.com/store/apps/details?id=io.github.erankopel.selfpractice">Gateway Self-Practice on Google Play</a>
+</footer>
+
+</body>
+</html>
